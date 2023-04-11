@@ -178,7 +178,7 @@ button {
 
 /*Pilih kategori*/
 h3.tosca{
-    color: #219EBC;
+    color: #219EBC !important;
 }
 
 .pembayaran div{
@@ -196,4 +196,18 @@ h3.tosca{
 .metode-pembayaran h3{ 
     font-size: 14px;
     margin: 1rem 0;
+}
+
+/*Bank Transfer*/
+.metode-pembayaran.bank h3{
+    color: #575959;
+    margin: .75em 0;
+}
+
+.metode-pembayaran.bank h2{
+    margin-top: 0px;
+}
+
+h3.tosca.bank{
+    text-align: right;
 }
