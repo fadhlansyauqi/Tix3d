@@ -60,3 +60,20 @@ nav.navbar{
     font-size: 14px;
     color: #575959;
 }
+
+.carousel-inner img {
+    width: 100%;
+    height: 400px; 
+}
+
+.slider-section{
+width: 90%;
+height: 360px;
+}
+
+.hero{
+    width: 100%;
+    height: 600px;
+    
+    background: url(img/cover-foto.png);
+}
