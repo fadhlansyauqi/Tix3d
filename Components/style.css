@@ -32,13 +32,13 @@ nav.navbar{
 .breadcrumb .breadcrumb-item a{
     font-weight: 400;
     font-size: 14px;
-    color: #FB8500;
+    color: #575959;
     text-decoration: none;
     padding: 0px .5em;
 }
 
-.breadcrumb .breadcrumb-item a.active{
-    color: #575959;
+.breadcrumb .breadcrumb-item.active a{
+    color: #FB8500 !important;
 }
 
 #bc::before {
@@ -143,3 +143,136 @@ height: 360px;
       height: 10em;
     }
  }
+
+select.kategori{
+    width: auto !important;
+}
+
+.form-select{
+    border: 0.5px solid #A1A1A1 !important;
+    border-radius: 6px;
+}
+
+.form-select:after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%; 
+    right: 1rem; 
+    transform: translateY(-50%); 
+    pointer-events: none;
+}
+
+/*Styling Page pesan*/
+section.body-content{
+    background-color: #F4F4F4;
+    height: 91vh;
+}
+
+.body-content .btn-prev{
+    padding: 2rem 0;
+}
+
+.detail-pemesanan .form-detail-pesanan, .detail-pemesanan .form-pemesan{
+    padding: 1rem;
+    background: #FCFCFC;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 0 1rem;
+}
+
+.form-control::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    color: #A1A1A1;
+}
+
+label{
+    font-weight: 400;
+    font-size: 14px;
+    color: #1A1A19;
+    margin-left: .25rem;
+}
+
+.body-content h2{
+    font-weight: 500;
+    font-size: 18px;
+    color: #1A1A19;
+    margin: 1.25rem 0;
+}
+
+.body-content h3{
+    font-size: 14px;
+}
+
+.danger{
+    color: #EA261F !important;
+}
+
+h3.title-secondary{
+    font-weight: 400;
+    color: #575959;
+}
+
+.divider.last{
+    margin-bottom: .5rem;
+}
+
+button {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+}
+.buttonPrimary {
+    background-color: #FB8500;
+    color: #FCFCFC;
+    border-radius: 10px;
+    border: none;
+    padding: .75rem 1.5rem;
+}
+.buttonPrimary:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FB8500;
+    color: white;
+}
+
+.card-left p{
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    margin: 1rem 0px;
+}
+
+/*Pilih kategori*/
+h3.tosca{
+    color: #219EBC !important;
+}
+
+.pembayaran div{
+    border: 0.5px solid #A1A1A1;
+    border-radius: 4px;
+    padding: 10px;
+    height: 60px;
+    margin-left: 1rem;
+}
+
+.pembayaran div.first{
+    margin-left: 0px !important;
+}
+
+.metode-pembayaran h3{ 
+    font-size: 14px;
+    margin: 1rem 0;
+}
+
+/*Bank Transfer*/
+.metode-pembayaran.bank h3{
+    color: #575959;
+    margin: .75em 0;
+}
+
+.metode-pembayaran.bank h2{
+    margin-top: 0px;
+}
+
+h3.tosca.bank{
+    text-align: right;
+}
