@@ -7,7 +7,6 @@
 /*Styling Navbar*/
 nav.navbar{
    width: 100%;
-    background-color: transparent !important;
 }
 
 .navbar-content{
@@ -129,9 +128,6 @@ height: 360px;
   transform: translateY(-55%);
 }
 
-.buy-section{
-
-}
 .detail-card{
     border-radius: 1.5rem;
     width: 100%;
