@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal - Daftar Nomor HP</title>
-
 
     <style>
       .modal-content {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 500;
       }
@@ -31,7 +37,7 @@
       }
       .modal-header a {
         text-decoration: none;
-        color: #FB8500;
+        color: #fb8500;
         font-size: 16px;
       }
       .modal-body {
@@ -46,96 +52,144 @@
         border-top: none;
       }
       .buttonDaftar {
-            background-color: #FB8500;
-            color: #FCFCFC;
-            border-radius: 10px;
-            border: none;
-            width: 90%;
-            height: 47px;
-            left: 20px;
-            top: 20px;
-        }
-        .buttonDaftar:hover {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FB8500;
-            color: white;
-            
-        }
-        .modal-footer p {
-           font-size: 16px;
-           color: #575959;
-           padding: 32px 40px;
-        }
+        background-color: #fb8500;
+        color: #fcfcfc;
+        border-radius: 10px;
+        border: none;
+        width: 90%;
+        height: 47px;
+        left: 20px;
+        top: 20px;
+      }
+      .buttonDaftar:hover {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          #fb8500;
+        color: white;
+      }
+      .modal-footer p {
+        font-size: 16px;
+        color: #575959;
+        padding: 32px 40px;
+      }
 
-        /* Button Google */
-        .buttonGoogle{    
-            border: 0.5px solid #A1A1A1;
-            border-radius: 8px;
-            background: #FFFFFF;
-            max-width: 90%;
-            height: 47px;
-            font-size: 16px;
-        }
+      /* Button Google */
+      .buttonGoogle {
+        border: 0.5px solid #a1a1a1;
+        border-radius: 8px;
+        background: #ffffff;
+        max-width: 90%;
+        height: 47px;
+        font-size: 16px;
+      }
 
-        .buttonGoogle:hover {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFFFFF;
-        }
+      .buttonGoogle:hover {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          #ffffff;
+      }
 
-        .buttonGoogle img  {
-            width: 7%;
-            margin-right: 3%;
-        }
+      .buttonGoogle img {
+        width: 7%;
+        margin-right: 3%;
+      }
+      .active {
+        border-bottom-style: solid;
+        border-color: #fb8500;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
-  Daftar Nomor HP
-</button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#emailModal"
+    >
+      Daftar Nomor HP
+    </button>
 
-<!-- Modal -->
-<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="emailModalLabel"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           &ensp; Daftar
-        </h5>
-        <a href="#">Masuk</a>
-      </div>
-      
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="emailInput" class="form-label">No Ponsel</label>
-            <div class="input-group">
-                <!-- dropdown kode no telp -->
-                <div class="input-group-prepend">
-                  <select class="form-select" id="phone-code">
-                    <option value="+62">ID +62</option>
-                    <option value="+1">+1</option>
-                    <option value="+81">+81</option>
-                    <option value="+91">+91</option>
-                  </select>
-                </div>
-                <input type="tel" class="form-control" id="phone-number">
-            </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="emailModal"
+      tabindex="-1"
+      aria-labelledby="emailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="emailModalLabel">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              &ensp; Daftar
+            </h5>
+            <a href="#">Masuk</a>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <!-- Button Daftar -->
-        <button class="btn buttonDaftar ">Daftar</button>
 
-        <p>Atau dengan</p>
+          <div class="modal-body">
+            <!-- opsi daftar email/nomor ponsel -->
+            <div
+              class="option d-flex gap-5 border-bottom mb-3 justify-content-center"
+            >
+              <div
+                class="nomor_ponsel d-flex p-3 active justify-content-center"
+              >
+                <span>NOMOR PONSEL</span>
+              </div>
+              <div class="email pb-3 p-3">
+                <span>EMAIL</span>
+              </div>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Nomor Ponsel</label>
+                <div class="input-group">
+                  <!-- dropdown kode no telp -->
+                  <div class="input-group-prepend">
+                    <select class="form-select" id="phone-code">
+                      <option value="+62">ID +62</option>
+                      <option value="+1">+1</option>
+                      <option value="+81">+81</option>
+                      <option value="+91">+91</option>
+                    </select>
+                  </div>
+                  <input type="tel" class="form-control" id="phone-number" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <!-- Button Daftar -->
+            <button class="btn buttonDaftar">Daftar</button>
 
-        <!-- Button Link Akun Google -->
-        <button type="button" class="btn buttonGoogle w-100 "><img src="img/google.svg"> Google</button>
+            <p>Atau dengan</p>
+
+            <!-- Button Link Akun Google -->
+            <button type="button" class="btn buttonGoogle w-100">
+              <img src="img/google.svg" /> Google
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
