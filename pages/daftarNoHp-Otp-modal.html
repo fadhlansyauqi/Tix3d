@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal - Daftar Nomor HP</title>
+
+
+    <style>
+      .modal-content {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+      }
+      .modal-header {
+        margin-top: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .modal-title {
+        font-size: 24px;
+      }
+      .modal-header a {
+        text-decoration: none;
+        color: #FB8500;
+        font-size: 16px;
+      }
+      .modal-body {
+        width: 90%;
+        margin-left: 5%;
+      }
+      .otp-input {
+        text-align: center;
+        font-size: 24px;
+        width: 60px;
+        height: 43px;
+        margin: 0 10px;
+        padding: 12px 16px;
+        gap: 16px;
+        opacity: 0.8;
+        border: 0.5px solid #A1A1A1;
+        border-radius: 8px;
+      }
+      .otp-input:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #007BFF;
+      }
+      .modal-footer {
+        border-top: none;
+      }
+      .buttonDaftar {
+            background-color: #FB8500;
+            color: #FCFCFC;
+            border-radius: 10px;
+            border: none;
+            width: 90%;
+            height: 47px;
+            left: 20px;
+            top: 20px;
+        }
+        .buttonDaftar:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FB8500;
+            color: white;
+            
+        }
+        .modal-footer p {
+           font-size: 16px;
+           color: #575959;
+           padding: 32px 40px;
+        }
+
+        /* Button Google */
+        .buttonGoogle{    
+            border: 0.5px solid #A1A1A1;
+            border-radius: 8px;
+            background: #FFFFFF;
+            max-width: 90%;
+            height: 47px;
+            font-size: 16px;
+        }
+
+        .buttonGoogle:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFFFFF;
+        }
+
+        .buttonGoogle img  {
+            width: 7%;
+            margin-right: 3%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#otp-modal">
+      Kirim OTP SMS
+    </button>
+
+<!-- Modal -->
+<div class="modal fade" id="otp-modal" tabindex="-1" aria-labelledby="otp-modal-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailModalLabel"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           &ensp; Masukkan Kode OTP
+        </h5>
+      </div>
+      
+      <div class="modal-body">
+        <p>Mohon Periksa Pesan kamu. Kami telah mengirimkan kode OTP ke +62 895-6767-890 </p>
+        <div class="input-group mb-3 d-flex justify-content-center">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+        </div>
+        <p class="d-flex justify-content-center">Kirim Ulang Kode OTP (60)</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <!-- Button verifikasi akun -->
+        <button class="btn btn-secondary buttonDaftar " disabled>Verfikasi Akun</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

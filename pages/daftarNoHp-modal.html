@@ -43,6 +43,10 @@
       .modal-body {
         width: 90%;
         margin-left: 5%;
+        border-bottom: none;
+      }
+      .input-group-prepend {
+        margin-right: 5%;
       }
       .modal-footer {
         border-top: none;
@@ -109,7 +113,7 @@
       data-bs-toggle="modal"
       data-bs-target="#emailModal"
     >
-      Daftar Email
+      Daftar Nomor HP
     </button>
 
     <!-- Modal -->
@@ -141,23 +145,29 @@
               class="option d-flex gap-5 border-bottom mb-3 justify-content-center"
             >
               <div
-                class="nomor_ponsel d-flex p-3"
+                class="nomor_ponsel d-flex p-3 active justify-content-center"
               >
                 <span>NOMOR PONSEL</span>
               </div>
-              <div class="email pb-3 p-3 active">
+              <div class="email pb-3 p-3">
                 <span>EMAIL</span>
               </div>
             </div>
             <form>
               <div class="mb-3">
-                <label for="emailInput" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailInput"
-                  aria-describedby="emailHelp"
-                />
+                <label for="emailInput" class="form-label">Nomor Ponsel</label>
+                <div class="input-group">
+                  <!-- dropdown kode no telp -->
+                  <div class="input-group-prepend">
+                    <select class="form-select" id="phone-code">
+                      <option value="+62">ID +62</option>
+                      <option value="+1">+1</option>
+                      <option value="+81">+81</option>
+                      <option value="+91">+91</option>
+                    </select>
+                  </div>
+                  <input type="tel" class="form-control" id="phone-number" />
+                </div>
               </div>
             </form>
           </div>
