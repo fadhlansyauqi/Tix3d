@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal - Daftar Detail</title>
+    <title>Modal - Daftar Email OTP</title>
 
 
     <style>
@@ -24,7 +24,6 @@
         margin-top: 10px;
         margin-left: 5%;
         margin-right: 5%;
-        border-bottom: none;
       }
       .modal-title {
         font-size: 24px;
@@ -34,28 +33,27 @@
         color: #FB8500;
         font-size: 16px;
       }
-
-      /* modal body */
       .modal-body {
         width: 90%;
         margin-left: 5%;
-        border-bottom: none;
       }
-      
-      .input-group-prepend {
-        margin-right: 5%;
+      .otp-input {
+        text-align: center;
+        font-size: 24px;
+        width: 60px;
+        height: 43px;
+        margin: 0 10px;
+        padding: 12px 16px;
+        gap: 16px;
+        opacity: 0.8;
+        border: 0.5px solid #A1A1A1;
+        border-radius: 8px;
       }
-
-      .form-control {
-        margin-bottom: 5%;
+      .otp-input:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #007BFF;
       }
-
-      .flNamaLengkap, .flPassword {
-        margin-bottom: -10px;
-        padding-bottom: -10px;
-      }
-
-      /* modal footer */
       .modal-footer {
         border-top: none;
       }
@@ -102,69 +100,34 @@
 </head>
 <body>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
-  Daftar 
-</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#otp-modal">
+      Kirim OTP Email
+    </button>
 
 <!-- Modal -->
-<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+<div class="modal fade" id="otp-modal" tabindex="-1" aria-labelledby="otp-modal-label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="emailModalLabel"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           &ensp; Daftar
+           &ensp; Masukkan Kode OTP
         </h5>
-        <a href="#">Masuk</a>
       </div>
       
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="phoneInput" class="form-label" required>No Ponsel</label>
-            <div class="input-group">
-                <!-- dropdown kode no telp -->
-                <div class="input-group-prepend">
-                  <select class="form-select" id="phone-code">
-                    <option value="+62">ID +62</option>
-                    <option value="+1">+1</option>
-                    <option value="+81">+81</option>
-                    <option value="+91">+91</option>
-                  </select>
-                </div>
-                <!-- input box no telp -->
-                <input type="tel" class="form-control" id="phoneInput">
-            </div>
-          </div>
-
-          <!-- input email -->
-          <div class="mb-3">
-            <label for="emailInput" class="form-label" aria-required="true">Email</label>
-            <input type="email" class="form-control " id="emailInput" aria-describedby="emailHelp">
-          </div>
-
-          <!-- input nama lengkap -->
-          <div class="mb-3">
-            <label for="nameInput" class="form-label flNamaLengkap" aria-required="true">Nama Lengkap</label>
-            <div id="nameHelp" class="form-text">Seperti di KTP/Sim/Paspor</div>
-            <input type="text" class="form-control " id="nameInput" aria-describedby="nameHelp">
-          </div>
-
-          <!-- input password -->
-          <div class="mb-3">
-            <label for="passwordInput" class="form-label flPassword" aria-required="true">Password</label>
-            <div id="passwordHelp" class="form-text">Min. 7 karakter berupa kombinasi angka, huruf besar dan huruf kecil</div>
-            <input type="password" class="form-control " id="passwordInput" aria-describedby="passwordHelp">
-          </div>
-        </form>
+        <p>Mohon Periksa Email kamu. Kami telah mengirimkan kode OTP ke tix3d@gmail.com </p>
+        <div class="input-group mb-3 d-flex justify-content-center">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+        </div>
+        <p class="d-flex justify-content-center">Kirim Ulang Kode OTP (60)</p>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <!-- Button Daftar -->
-        <button class="btn buttonDaftar ">Daftar</button>
-
-        <p>Atau dengan</p>
-
-        <!-- Button Link Akun Google -->
-        <button type="button" class="btn buttonGoogle w-100 "><img src="img/google.svg"> Google</button>
+        <!-- Button verifikasi akun -->
+        <button class="btn btn-secondary buttonDaftar " disabled>Verifikasi Akun</button>
       </div>
     </div>
   </div>

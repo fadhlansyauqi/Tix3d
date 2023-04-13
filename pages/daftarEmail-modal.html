@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal - Daftar Nomor HP</title>
+    <title>Modal - Daftar Email</title>
 
     <style>
       .modal-content {
@@ -39,6 +39,12 @@
         text-decoration: none;
         color: #fb8500;
         font-size: 16px;
+      }
+      
+      /* Orange Line that show active menu modal */
+      .active {
+        border-bottom-style: solid;
+        border-color: #fb8500;
       }
       .modal-body {
         width: 90%;
@@ -95,10 +101,6 @@
         width: 7%;
         margin-right: 3%;
       }
-      .active {
-        border-bottom-style: solid;
-        border-color: #fb8500;
-      }
     </style>
   </head>
   <body>
@@ -137,12 +139,9 @@
 
           <div class="modal-body">
             <!-- opsi daftar email/nomor ponsel -->
-            <div
-              class="option d-flex gap-5 border-bottom mb-3 justify-content-center"
-            >
+            <div class="option d-flex gap-5 border-bottom mb-3 justify-content-center">
               <div
-                class="nomor_ponsel d-flex p-3"
-              >
+                class="nomor_ponsel d-flex p-3">
                 <span>NOMOR PONSEL</span>
               </div>
               <div class="email pb-3 p-3 active">

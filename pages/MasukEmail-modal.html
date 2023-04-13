@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal - Daftar Nomor HP</title>
+    <title>Modal - Masuk Email</title>
 
     <style>
       .modal-content {
@@ -40,18 +40,30 @@
         color: #fb8500;
         font-size: 16px;
       }
-       /* Orange Line that show active menu modal */
-       .active {
+      
+      /* Orange Line that show active menu modal */
+      .active {
         border-bottom-style: solid;
         border-color: #fb8500;
       }
       .modal-body {
         width: 90%;
         margin-left: 5%;
-        border-bottom: none;
       }
-      .input-group-prepend {
-        margin-right: 5%;
+      .lupaSandi {
+        text-align: right;
+        text-decoration: none;
+        color: #FDB666;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+
+      }
+
+      .form-check-input {
+        background-color: #D9D9D9;
+        border-radius: 2px;;
       }
       .modal-footer {
         border-top: none;
@@ -112,9 +124,8 @@
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#emailModal"
-    >
-      Daftar Nomor HP
+      data-bs-target="#emailModal">
+      Masuk Email
     </button>
 
     <!-- Modal -->
@@ -135,43 +146,43 @@
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
-              &ensp; Daftar
+              &ensp; Masuk
             </h5>
-            <a href="#">Masuk</a>
+            <a href="#">Daftar</a>
           </div>
 
           <div class="modal-body">
-            <!-- opsi daftar email/nomor ponsel -->
-            <div
-              class="option d-flex gap-5 border-bottom mb-3 justify-content-center"
-            >
+            <!-- opsi Masuk email/nomor ponsel -->
+            <div class="option d-flex gap-5 border-bottom mb-3 justify-content-center">
               <div
-                class="nomor_ponsel d-flex p-3 active justify-content-center"
-              >
+                class="nomor_ponsel d-flex p-3">
                 <span>NOMOR PONSEL</span>
               </div>
-              <div class="email pb-3 p-3">
+              <div class="email pb-3 p-3 active">
                 <span>EMAIL</span>
               </div>
             </div>
             <form>
+              <!-- Input email -->
               <div class="mb-3">
-                <label for="emailInput" class="form-label">Nomor Ponsel</label>
-                <div class="input-group">
-                  <!-- dropdown kode no telp -->
-                  <div class="input-group-prepend">
-                    <select class="form-select" id="phone-code">
-                      <option value="+62">ID +62</option>
-                      <option value="+1">+1</option>
-                      <option value="+81">+81</option>
-                      <option value="+91">+91</option>
-                    </select>
-                  </div>
-                  <input type="tel" class="form-control" id="phone-number" />
-                </div>
+                <label for="emailInput" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"/>
               </div>
-            </form>
+
+              <!-- input password -->
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label flPassword" aria-required="true">Password</label> 
+            <a class="lupaSandi" href="#">Lupa Kata Sandi?</a>
+            <input type="password" class="form-control " id="passwordInput" aria-describedby="passwordHelp">
           </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Ingat Saya</label>
+          </div>
+            </form>
+
+          </div>
+          
           <div class="modal-footer d-flex justify-content-center">
             <!-- Button Daftar -->
             <button class="btn buttonDaftar">Daftar</button>
