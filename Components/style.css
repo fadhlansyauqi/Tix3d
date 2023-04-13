@@ -5,8 +5,8 @@
 }
 
 /*Styling Navbar*/
-nav.navbar{
-    background-color: transparent !important;
+.navbar{
+    background-color: white;
 }
 
 .navbar-content{
@@ -56,7 +56,7 @@ nav.navbar{
     font-weight: 500;
 }
 
-.card .card-body p{
+.card .card-body {
     font-size: 14px;
     color: #575959;
 }
