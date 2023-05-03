@@ -10,11 +10,26 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../../style.css">
     <style>
+        .stage {
+            border-style: solid;
+            width: 200px;
+            aspect-ratio: 1;
+            transition: none 1s none;
+            background-color: #00B800;
+            -webkit-clip-path: polygon(69% 74%, 84% 74%, 85% 100%, 22% 99%, 22% 73%, 36% 72%, 36% 25%, 0 24%, 0 0, 100% 0, 99% 23%, 68% 24%);
+            clip-path: polygon(69% 74%, 84% 74%, 85% 100%, 22% 99%, 22% 73%, 36% 72%, 36% 25%, 0 24%, 0 0, 100% 0, 99% 23%, 68% 24%);
+        }
+
+        .stage:hover {
+            transform: scale(1.2);
+        }
+
         .footer {
             width: 100%;
             padding: 32px 200px;
             background-color: #F6E7D7;
         }
+
 
         .kontak {
             margin-right: 40px;
@@ -26,14 +41,17 @@
         }
 
         .input-field {
-            width: 100px; /* menyesuaikan lebar input field sesuai kebutuhan */
+            width: 100px;
+            /* menyesuaikan lebar input field sesuai kebutuhan */
             text-align: center;
         }
 
         .btn {
             cursor: pointer;
-            margin: 0 5px; /* menyesuaikan margin antara tombol tambah dan kurang sesuai kebutuhan */
+            margin: 0 5px;
+            /* menyesuaikan margin antara tombol tambah dan kurang sesuai kebutuhan */
         }
+
         .logo {
             margin-bottom: 24px;
         }
@@ -114,94 +132,137 @@
 
             <i class="fa fa-arrow-left " aria-hidden="true"></i><span class="mx-3 ">Kembali</span><br><br>
             <div class="row position-relative">
-            <div class="col ">
-                <div class="detail-card  p-4 my-3">
-               
-                    <img src="../../img/map.png" class="img-fluid" alt="" srcset="">
-                </div>
+                <div class="col ">
+                    <div class="detail-card  p-4 my-3">
 
-                <div class="detail-card  p-4 my-3">
-               
-                    <div class="row">
-                        <div class="col">
-                            <i class="fa-solid fa-circle"  style="color: #FF9700; margin-right: 2rem;"></i><span>Rp 1.400.000</span><br><br>    
-                            <i class="fa-solid fa-circle"  style="color: #00B800; margin-right: 2rem;"></i><span>Rp 2.400.000</span><br><br>    
-                            <i class="fa-solid fa-circle"  style="color: #7979FF; margin-right: 2rem;"></i><span>Rp 3.400.000</span> 
+                        <img src="../../img/map.png" alt="" srcset="" usemap="#image-map" class="map">
 
-                        </div>
-                        <div class="col">
-                            <i class="fa-solid fa-circle"  style="color: #FFFF00; margin-right: 2rem;"></i><span>Rp 2.000.000</span><br><br>
-                            <i class="fa-solid fa-circle"  style="color: #FFB7F6; margin-right: 2rem;"></i><span>Rp 2.900.000</span>    
-                        </div>
-                        <div class="col">
-                            <i class="fa-solid fa-circle"  style="color: #B73CFF; margin-right: 2rem;"></i><span>Rp 2.200.000</span><br><br>
-                            <i class="fa-solid fa-circle"  style="color: #FF0198; margin-right: 2rem;"></i><span>Rp 3.400.000</span>    
-                        </div>
+                        <map name="image-map">
+                            <area target="_blank" alt="Blue A SC" title="Blue A SC" href=""
+                                coords="250,105,402,107,403,188,369,191,369,242,248,241" shape="poly">
+                            <area target="_blank" alt="Blue B SC" title="Blue B SC" href=""
+                                coords="517,105,675,106,677,245,555,245,557,189,518,190" shape="poly">
+                            <area target="_blank" alt="Pink A SO" title="Pink A SO" href=""
+                                coords="247,251,369,253,370,296,247,294" shape="poly">
+                            <area target="_blank" alt="Pink B SO" title="Pink B SO" href=""
+                                coords="554,253,677,253,677,295,555,294" shape="poly">
+                            <area target="_blank" alt="Pink A " title="Pink A " href=""
+                                coords="247,294,453,295,453,386,248,384" shape="poly">
+                            <area target="_blank" alt="Pink B" title="Pink B" href=""
+                                coords="470,296,676,298,676,386,471,386" shape="poly">
+                            <area target="_blank" alt="Green A" title="Green A" href=""
+                                coords="249,403,248,496,454,497,451,401" shape="poly">
+                            <area target="_blank" alt="Green B" title="Green B" href=""
+                                coords="471,399,470,497,677,497,676,400" shape="poly">
+                            <area target="_blank" alt="Purple B" title="Purple B" href=""
+                                coords="696,122,779,122,780,498,695,497" shape="poly">
+                            <area target="_blank" alt="Purple A" title="Purple A" href=""
+                                coords="146,123,229,124,230,496,145,498" shape="poly">
+                            <area target="_blank" alt="Orange A " title="Orange A " href=""
+                                coords="187,526,394,526,393,628,187,626" shape="poly">
+                            <area target="_blank" alt="Orange B" title="Orange B" href=""
+                                coords="532,525,532,626,738,626,737,526" shape="poly">
+                            <area target="_blank" alt="Yellow" title="Yellow" href=""
+                                coords="221,641,703,639,703,768,221,769" shape="poly">
+                            <area target="_blank" alt="FOH" title="FOH" href="" coords="408,547,516,548,517,627,408,626"
+                                shape="poly">
+                            <area target="_blank" alt="STAGE" title="STAGE" href=""
+                                coords="248,0,248,95,419,96,419,205,382,203,384,285,541,286,541,203,503,204,505,96,677,94,677,0"
+                                shape="poly">
+
+                        </map>
                     </div>
-                </div>  
-            </div>
-          
 
-            <div class="col ">
-                <div class="detail-card  p-4">
-                    <h4 class="text-title" >Tanggal</h4>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1">@</span>
-                        </div>
-                        <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-                </div>
-                <div class="detail-card  p-4 my-3 ">
-                    <div class="row">
-                        <h4 class="text-title" >Jumlah Tiket</h4>
-                        <div class="col">
-                                <h5>Pax</h5>
-                        </div>
-                        <div class="col">
-                            <div class="input-container fw-bold">
-                                <span style="color: #FB8500;"  id="rsMoney">Rp : </span> 
-                                <button class="btn" onclick="decrement()">-</button>
-                                <input type="number" class="input-field" id="numberInput" value="0">
-                                <button class="btn" onclick="increment()">+</button>
+                    <div class="detail-card  p-4 my-3">
+
+                        <div class="row">
+                            <div class="col">
+                                <i class="fa-solid fa-circle" style="color: #FF9700; margin-right: 2rem;"></i><span>Rp
+                                    1.400.000</span><br><br>
+                                <i class="fa-solid fa-circle" style="color: #00B800; margin-right: 2rem;"></i><span>Rp
+                                    2.400.000</span><br><br>
+                                <i class="fa-solid fa-circle" style="color: #7979FF; margin-right: 2rem;"></i><span>Rp
+                                    3.400.000</span>
+
+                            </div>
+                            <div class="col">
+                                <i class="fa-solid fa-circle" style="color: #FFFF00; margin-right: 2rem;"></i><span>Rp
+                                    2.000.000</span><br><br>
+                                <i class="fa-solid fa-circle" style="color: #FFB7F6; margin-right: 2rem;"></i><span>Rp
+                                    2.900.000</span>
+                            </div>
+                            <div class="col">
+                                <i class="fa-solid fa-circle" style="color: #B73CFF; margin-right: 2rem;"></i><span>Rp
+                                    2.200.000</span><br><br>
+                                <i class="fa-solid fa-circle" style="color: #FF0198; margin-right: 2rem;"></i><span>Rp
+                                    3.400.000</span>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
-                <div class="detail-card  p-4 my-3 ">
-                    <div class="row">
-                        <div class="col">
-                            <div class="d-flex flex-column">
-                                <div class="mr-auto p-2">Tiket Terpilih</div>
-                                <div class="p-2">Tanggal</div>
-                              </div>
-                        </div>
-                        <div class="col">
-                            <div class="d-flex align-items-end flex-column fw-bold">
-                                <div class="mr-auto p-2">Purple A (Standing)</div>
-                                <div class="p-2">18 Maret 2023</div>
-                              </div>
+
+
+                <div class="col ">
+                    <div class="detail-card  p-4">
+                        <h4 class="text-title">Tanggal</h4>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
                         </div>
                     </div>
-                    <hr>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <p>Total Harga</p>
-                            <h4 id="rsMoneyO">Rp : </h4>
+                    <div class="detail-card  p-4 my-3 ">
+                        <div class="row">
+                            <h4 class="text-title">Jumlah Tiket</h4>
+                            <div class="col">
+                                <h5>Pax</h5>
+                            </div>
+                            <div class="col">
+                                <div class="input-container fw-bold">
+                                    <span style="color: #FB8500;" id="rsMoney">Rp : </span>
+                                    <button class="btn" onclick="decrement()">-</button>
+                                    <input type="number" class="input-field" id="numberInput" value="0">
+                                    <button class="btn" onclick="increment()">+</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col item-end">
-                            <div class="d-flex align-items-end flex-column fw-bold">
-                                <button class="buttonPrimary" >Beli Tiket</button>
-                             </div>
-                        </div>
+
                     </div>
-                  
+                    <div class="detail-card  p-4 my-3 ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex flex-column">
+                                    <div class="mr-auto p-2">Tiket Terpilih</div>
+                                    <div class="p-2">Tanggal</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-end flex-column fw-bold">
+                                    <div class="mr-auto p-2">Purple A (Standing)</div>
+                                    <div class="p-2">18 Maret 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <p>Total Harga</p>
+                                <h4 id="rsMoneyO">Rp : </h4>
+                            </div>
+                            <div class="col item-end">
+                                <div class="d-flex align-items-end flex-column fw-bold">
+                                    <button class="buttonPrimary">Beli Tiket</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="footer d-flex">
         <!-- kontak -->
@@ -243,6 +304,7 @@
         <div class="pembayaran" style="padding: 24px 0px;">
             <div style="margin-bottom: 16px;">
                 <span">Pilihan Pembayaran</span>
+
             </div>
 
             <div class="d-flex">
@@ -255,13 +317,16 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type='text/javascript' src='http://davidlynch.org/projects/maphilight/jquery.maphilight.js'></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js">
+    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
-     <script>
+    <script>
         function increment() {
             var inputField = document.getElementById("numberInput");
             var currentValue = parseInt(inputField.value);
@@ -278,13 +343,22 @@
         var currencySymbol = document.getElementById("rsMoney");
         var currencySymbolO = document.getElementById("rsMoneyO");
         var inputField = document.getElementById("numberInput");
-        inputField.addEventListener("input", function() {
+        inputField.addEventListener("input", function () {
             var currentValue = parseInt(inputField.value);
-            currencySymbolO.textContent = "Rp : " + (currentValue * 500000); // Mengubah simbol mata uang menjadi $ dan mengalikan dengan 1000
+            currencySymbolO.textContent = "Rp : " + (currentValue *
+                500000); // Mengubah simbol mata uang menjadi $ dan mengalikan dengan 1000
 
-            currencySymbol.textContent = "Rp : " + (currentValue * 500000); // Mengubah simbol mata uang menjadi $ dan mengalikan dengan 1000
+            currencySymbol.textContent = "Rp : " + (currentValue *
+                500000); // Mengubah simbol mata uang menjadi $ dan mengalikan dengan 1000
         });
     </script>
+  
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('.map').maphilight({ alwaysOn: true });
+          $('.map').maphilight();
+      });   
+  </script>
 </body>
 
 </html>
