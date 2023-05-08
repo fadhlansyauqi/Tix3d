@@ -220,6 +220,14 @@
                   <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
                 </div>
               </div>
+              <div class="card d-none d-md-block">
+                <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
+                  <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
+                  <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
+                </div>
+              </div>
               <div class="card  d-none d-md-block">
                 <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -376,7 +384,27 @@
       </div>
     </div>
   </div>
+<script>
+var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+var cardWidth = $(".carousel-item").width();
+var scrollPosition = 0;
+$(".carousel-control-next").on("click", function () {
+  if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
+    scrollPosition += cardWidth;  //update scroll position
+    $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); //scroll left
+  }
+});
+$(".carousel-control-next").on("click", function () {
+  if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
+    scrollPosition += cardWidth;  //update scroll position
+    $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); //scroll left
+  }
+});
 
+
+
+
+</script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
