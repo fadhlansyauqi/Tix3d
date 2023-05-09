@@ -48,6 +48,48 @@
             width: 50%;
 
         }
+
+        .gallery_pics_holder {
+            border: px solid green;
+            width: 100%;
+            text-align: center;
+            height: 350px;
+            display: table;
+        }
+
+        .gallery_pics {
+            display: inline-block;
+            width: 100%;
+            height: 30%;
+            margin: 10px;
+            text-align: center;
+            background-color: #3C0;
+        }
+
+        .gallery_pics img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery_pics:hover {
+            cursor: pointer;
+        }
+
+        .gallery_pics.fullscreen img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery_pics.fullscreen {
+            z-index: 9999;
+            position: fixed;
+            margin: 0 auto;
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+            background-color: #0FF;
+        }
     </style>
     <title>Detail-Event</title>
 </head>
@@ -162,8 +204,6 @@
                                 </div>
                                 <div class="col-sm-9" style="padding-top: 1rem;">
                                     <p>Diselenggarakan oleh <br><strong>YG Entertainment</strong></p>
-
-
                                 </div>
                             </div>
                         </div>
@@ -173,16 +213,21 @@
                     </div>
                     <div class="detail-card  p-4 my-3 ">
                         <div class="dropdown">
-                            <button class="btn dropdown-toggle fw-bold" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn dropdown-toggle fw-bold" type="button" id="ButtonEnable"
+                                onclick="showImgCover()" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="display: block;">
                                 Venue
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+                            <button class="btn dropdown-toggle fw-bold" type="button" id="ButtonDisable"
+                            onclick="hideImgCover()" data-toggle="dropdown" aria-haspopup="true" 
+                            style="display: none;"
+                            aria-expanded="false">
+                            Venue
+                        </button>
                         </div>
+                    </div>
+                    <div class="gallery_pics" id="imgCover" style="display: none;">
+                        <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
                     </div>
                 </div>
             </div>
@@ -242,12 +287,47 @@
             </div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.gallery_pics').click(function (e) {
+                // Change Selector Here
+                $(this).toggleClass('fullscreen');
+            });
+        });
+
+        function showImgCover() {
+            var btnHide = document.getElementById("ButtonDisable")
+            var btnShow = document.getElementById("ButtonEnable")
+
+
+            btnHide.style.display = "block"
+            btnShow.style.display = "none"
+            var img = document.getElementById("imgCover")
+
+            img.style.display = "block"
+
+        }
+
+        function hideImgCover() {
+            var btnHide = document.getElementById("ButtonDisable")
+            var btnShow = document.getElementById("ButtonEnable")
+
+
+            btnHide.style.display = "none"
+            btnShow.style.display = "block"
+            var img = document.getElementById("imgCover")
+
+            img.style.display = "none"
+
+        }
     </script>
 </body>
 
