@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, html{
+    font-family: 'Inter', sans-serif;
+}
+
+/*Styling Navbar*/
+.navbar{
+    background-color: white;
+}
+
+.navbar-content{
+    justify-content: space-between;
+}
+
+.navbar-content .navbar-collapse ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: black;
+    margin: .5em;
+}
+
+.navbar-content .navbar-collapse ul li a.button{
+    background-color: #FB8500;
+    border-radius: 10px;
+    color: white;
+}
+
+/*Styling kategori*/
+.breadcrumb .breadcrumb-item a{
+    font-weight: 400;
+    font-size: 14px;
+    color: #FB8500;
+    text-decoration: none;
+    padding: 0px .5em;
+}
+
+.breadcrumb .breadcrumb-item a.active{
+    color: #575959;
+}
+
+#bc::before {
+    content: ">";
+}
+/*Styling card*/
+
+.card .card-body h5{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #1A1A19;
+}
+
+.card .card-body h5.pricing{
+    font-weight: 500;
+}
+
+.card .card-body {
+    font-size: 14px;
+    color: #575959;
+}
+
+/*Styling Dropdown*/
+
+/* .btn-dropdown{
+    border: 0.5px solid #A1A1A1;
+    border-radius: 6px;
+    color: #1A1A19 !important;
+}
+
+.btn-dropdown.show, .btn-dropdown:hover, .btn-dropdown:focus{
+    background-color: white;
+}
+
+.dropdown-menu.show{
+    background: #FCFCFC;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05);
+    border: none;
+} */
+
+select.kategori{
+    width: auto !important;
+}
+
+.form-select{
+    border: 0.5px solid #A1A1A1 !important;
+    border-radius: 6px;
+}
+
+.form-select:after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%; 
+    right: 1rem; 
+    transform: translateY(-50%); 
+    pointer-events: none;
+}
