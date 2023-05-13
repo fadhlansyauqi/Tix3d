@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/logo-head.png">
   <style>
+   
     .card-slider-container {
       overflow-x: auto;
       white-space: nowrap;
@@ -26,364 +27,517 @@
       margin-right: 20px;
       /* Atur margin antara card */
     }
-    
-      .footer{
-        width: 100%;
-        padding: 32px 200px; 
-        background-color: #F6E7D7;
-      }
-      .kontak{
-        margin-right: 40px;
-      }
-      .logo{
-        margin-bottom: 24px;
-      }
-      .tix3d{
-        width: 150px;
-      }
-      .whatsapp{
-        gap: 24px;
-      }
-      .email{
-        align-items: center; 
-        gap: 24px
-      }
-      .tentang{
-        padding: 24px 0px; 
-        margin-right: 40px; 
-        width: 50%;
-        
-      }
+
+    .footer {
+      width: 100%;
+      padding: 32px 200px;
+      background-color: #F6E7D7;
+    }
+
+    .kontak {
+      margin-right: 40px;
+    }
+
+    .logo {
+      margin-bottom: 24px;
+    }
+
+    .tix3d {
+      width: 150px;
+    }
+
+    .whatsapp {
+      gap: 24px;
+    }
+
+    .email {
+      align-items: center;
+      gap: 24px
+    }
+
+    .tentang {
+      padding: 24px 0px;
+      margin-right: 40px;
+      width: 50%;
+
+    }
   </style>
   <title>Landing Pages</title>
 </head>
 
 <body>
   <!-- Header -->
-  <div class="container-fluid" style="background-color: #f4f4f4;">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white navbar-trans " style=" background-color: transparent !important;">
-    <div class="container">
-      <div class="navbar-content container d-flex">
-        <div>
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+  <div class="container-fluid px-0" style="background-color: #f4f4f4;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white navbar-trans "
+      style=" background-color: transparent !important;">
+      <div class="container">
+        <div class="navbar-content container d-flex">
+          <div>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+          </div>
+          <div>
+            <div class="collapse navbar-collapse collapse-item d-flex flex-row-reverse bd-highlight"
+              id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item p-2 bd-highlight">
+                  <a class="nav-link" aria-current="page" href="cek-order-empty.html">Cek Order</a>
+                </li>
+                <li class="nav-item p-2 bd-highlight">
+                  <a class="nav-link" href="#">Masuk</a>
+                </li>
+                <li class="nav-item p-2 bd-highlight">
+                  <button type="button" class="buttonDaftar" data-bs-toggle="modal" data-bs-target="#emailModal">Daftar</button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="collapse navbar-collapse collapse-item d-flex flex-row-reverse bd-highlight"
-            id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item p-2 bd-highlight">
-                <a class="nav-link" aria-current="page" href="cek-order-empty.html">Cek Order</a>
-              </li>
-              <li class="nav-item p-2 bd-highlight">
-                <a class="nav-link" href="#">Masuk</a>
-              </li>
-              <li class="nav-item p-2 bd-highlight">
-                <a class="nav-link button">Daftar</a>
-              </li>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="emailModal"
+      tabindex="-1"
+      aria-labelledby="emailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="emailModalLabel">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              &ensp; Daftar
+            </h5>
+            <a href="#">Masuk</a>
+          </div>
+
+          <div class="modal-body">
+            <!-- opsi daftar email/nomor ponsel -->
+            <div
+              class="option d-flex gap-5 border-bottom mb-3 justify-content-center"
+            >
+              <div
+                class="nomor_ponsel d-flex p-3 active justify-content-center"
+              >
+                <span>NOMOR PONSEL</span>
+              </div>
+              <div class="email pb-3 p-3">
+                <span>EMAIL</span>
+              </div>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Nomor Ponsel</label>
+                <div class="input-group">
+                  <!-- dropdown kode no telp -->
+                  <div class="input-group-prepend">
+                    <select class="form-select" id="phone-code">
+                      <option value="+62">ID +62</option>
+                      <option value="+1">+1</option>
+                      <option value="+81">+81</option>
+                      <option value="+91">+91</option>
+                    </select>
+                  </div>
+                  <input type="tel" class="form-control" id="phone-number" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <!-- Button Daftar -->
+            <button class="btn buttonDaftarModal">Daftar</button>
+
+            <p>Atau dengan</p>
+
+            <!-- Button Link Akun Google -->
+            <button type="button" class="btn buttonGoogle w-100">
+              <img src="img/google.svg" /> Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Hero Section -->
+    <div class="m-auto hero">
+      <h3 class="text-white fw-bold">Jangan lewatkan keseruan event favoritmu!</h3>
+      <div class="input-group my-3 search-input">
+
+        <span class="input-group-text" id="basic-addon1" style="background-color: #fcfcfc;"><i class="fas fa-search" style="color: #b3b3b3;"></i></span>
+        <input type="text" class="form-control" placeholder="Cari event seru disini" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <div class="container-fluid">
+      <div class="container-fluid" style="margin-bottom: 100px;">
+        <div class="m-auto slider-section my-5 my-5">
+          <!-- Slide -->
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
             </ul>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/iklan_loket 1.png" alt="Gambar 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/iklan_loket2.png" alt="Gambar 2">
+              </div>
+            </div>
+
+            <!-- Tombol Panah Kiri dan Kanan -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- End Slider -->
+        </div>
+      </div>
+
+      <!-- Card Best -->
+      <div class="container-fluid my-5" id="best-offer">
+        <div class="container" style="padding-left: 5%;">
+          <h2>Best Offers</h2>
+          <h5>Get the best deals on concert tickets with our exclusive offers.</h5>
+        </div>
+
+        <div class="m-auto slider-section">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <a href="detail-event.html">
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-treasure 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
+                      <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="card d-none d-md-block">
+                    <img src="img/wtf 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">WE THE FEST 2023</h5>
+                      <p class="card-text fw-light">GBK Sport Complex - Senayan Jakarta, DKI Jakarta <br>21 Jul - 23 Jul 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.900.000 - Rp 4.200.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/event-asian sound syndicate 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Asian Sound Syndicate</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta<br>26 - 27 Agustus 2023</p>
+                      <h5 class="card-text fw-bold">Rp 575.000 - Rp 4.600.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-hitc 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Head In The Clouds 88</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>7 Maret 2022</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card Konser-->
+      <div class="container-fluid my-5">
+        <div class="container" style="padding-left: 5%;">
+          <h2>Konser</h2>
+          <h5>Jadikan harimu lebih berkesan dengan merasakan pengalaman konser artis favoritmu</h5>
+        </div>
+
+        <div class="m-auto slider-section">
+          <div id="cardControl" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-blackpink 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Blackpink World Tour</h5>
+                      <p class="card-text fw-light">Gelora Bung Karno Stadium, Jakarta <br>11 - 12Maret 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-asian sound syndicate 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Asian Sound Syndicate</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>26 - 27 Agustus 2023</p>
+                      <h5 class="card-text fw-bold">Rp 575.000 - Rp 4.600.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="Img/event-hitc 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Head In The Clouds 88</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>7 Maret 2022</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card d-none d-md-block">
+                    <img src="img/wtf 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">WE THE FEST 2023</h5>
+                      <p class="card-text fw-light">GBK Sport Complex - Senayan Jakarta, DKI Jakarta <br>21 Jul - 23 Jul 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.900.000 - Rp 4.200.000</h5>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-blackpink 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Blackpink World Tour</h5>
+                      <p class="card-text fw-light">Gelora Bung Karno Stadium, Jakarta <br>11 - 12Maret 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/event-asian sound syndicate 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Asian Sound Syndicate</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta  <br> 26 - 27 Agustus 2023
+                        2023</p>
+                      <h5 class="card-text fw-bold">Rp 575.000 - Rp 4.600.000 </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card d-none d-md-block">
+                    <img src="img/event-blackpink 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Blackpink World Tour</h5>
+                      <p class="card-text fw-light">Gelora Bung Karno Stadium, Jakarta <br>11 - 12Maret 2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="Img/event-hitc 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Head In The Clouds 88</h5>
+                      <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>7 Maret 2022</p>
+                      <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/wtf 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">WE THE FEST 2023</h5>
+                      <p class="card-text fw-light">GBK Sport Complex - Senayan Jakarta, DKI Jakarta <br>21 Jul - 23 Jul
+                        2023</p>
+                      <h5 class="card-text fw-bold">Rp 1.900.000 - Rp 4.200.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#cardControl" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#cardControl" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card Fan Meeting-->
+      <div class="container-fluid my-5">
+        <div class="container" style="padding-left: 5%;">
+          <h2>Fan Meeting</h2>
+          <h5>Ambil kesempatan bertemu langsung dengan artis favoritmu!</h5>
+        </div>
+
+        <div class="m-auto slider-section">
+          <div id="cardControlFan" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <div class="card  d-none d-md-block">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 1</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 2</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 3</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card d-none d-md-block">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 4</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card  d-none d-md-block">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 5</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fw-normal">Fan Fun Fan AAA - 6</h5>
+                      <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
+                      <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#cardControlFan" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#cardControlFan" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+    </div>
+
+    <div class="footer d-flex">
+      <!-- kontak -->
+      <div class="kontak">
+        <div class="logo">
+          <img class="tix3d" src="img/logo.png" alt="" />
+        </div>
+
+        <div class="whatsapp d-flex">
+          <img src="img/ic-wa.svg" alt="" />
+          <div>
+            <span class="title-wa">WhatsApp</span>
+            <p class="no-wa">+62 895-3254-73045</p>
+          </div>
+        </div>
+
+        <div class="email d-flex">
+          <img src="img/ic-email.svg" alt="" />
+          <div>
+            <span class="title-email">Email</span>
+            <p class="no-wa">hello@tix3d.com</p>
           </div>
         </div>
       </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-    </div>
-  </nav>
-  <!-- End Header -->
-
-  <!-- Hero Section -->
-  <div class="m-auto hero">
-    <h3 class="text-white fw-bold">Jangan lewatkan keseruan event favoritmu!</h3>
-    <div class="input-group my-3 search-input">
-
-      <span class="input-group-text" id="basic-addon1"><i class="fas fa-search" style="color: #b3b3b3;"></i></span>
-      <input type="text" class="form-control" placeholder="Cari event seru disini" aria-label="Username"
-        aria-describedby="basic-addon1">
-    </div>
-  </div>
-  <!-- End Hero Section -->
-
-  <div class="container-fluid">
-    <div class="container-fluid " style="margin-bottom: 100px;">
-      <div class="m-auto slider-section my-5 my-5">
-        <!-- Slide -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ul class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-          </ul>
-
-          <!-- Slides -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/iklan_loket 1.png" alt="Gambar 1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/iklan_loket2.png" alt="Gambar 2">
-            </div>
-          </div>
-
-          <!-- Tombol Panah Kiri dan Kanan -->
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+      <!-- tentang tix3d -->
+      <div class="tentang">
+        <div style="margin-bottom: 24px;">
+          <span>Tentang Tix3D</span>
         </div>
-        <!-- End Slider -->
+        <p>
+          Tix3D adalah situs website e-commerce yang menyediakan tiket event
+          yang terintegrasi dengan teknologi 3D untuk meningkatkan pengalaman
+          pengguna dalam memutuskan pembelian tiket.
+        </p>
       </div>
-    </div>
 
-
-    <!-- Card Best-->
-    <div class="container-fluid my-5">
-      <div class="container" style="padding-left: 5%;">
-        <h2>Best Offers</h2>
-        <h5>Get the best deals on concert tickets with our exclusive offers.</h5>
-      </div>
-      <div class="m-auto slider-section">
-        <div id="cardControl" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-
-            <div class="cards-wrapper">
-              <div class="card d-none d-md-block">
-                <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
-                  <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
-                </div>
-              </div>
-              <div class="card  d-none d-md-block">
-                <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
-                  <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
-                  <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="https://via.placeholder.com/180" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Treasure Tour [HELLO] 2023</h5>
-                  <p class="card-text fw-light">ICE BSD City Hall 5-6, Kab Tangerang <br>18 - 19 Maret 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.400.000 - Rp 3.400.000</h5>
-                </div>
-              </div>
-
-              <a class="carousel-control-prev" href="#cardControl" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#cardControl" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-
-
-            </div>
-          </div>
+      <!-- pembayaran -->
+      <div class="pembayaran" style="padding: 24px 0px;">
+        <div style="margin-bottom: 16px;">
+          <span">Pilihan Pembayaran</span>
         </div>
-      </div>
-    </div>
-    <!-- End Card -->
-    <!-- Card Konser-->
-    <div class="container-fluid my-5">
-      <div class="container" style="padding-left: 5%;">
-        <h2>Konser</h2>
-        <h5>Jadikan harimu lebih berkesan dengan merasakan pengalaman konser artis favoritmu</h5>
-      </div>
-      <div class="m-auto slider-section">
-        <div id="cardControl" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
 
-            <div class="cards-wrapper">
-              <div class="card d-none d-md-block">
-                <img src="img/event-blackpink 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Blackpink World Tour</h5>
-                  <p class="card-text fw-light">Gelora Bung Karno Stadium, Jakarta <br>11 - 12Maret 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
-                </div>
-              </div>
-              <div class="card  d-none d-md-block">
-                <img src="img/event-asian sound syndicate 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Asian Sound Syndicate</h5>
-                  <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>26 - 27 Agustus 2023</p>
-                  <h5 class="card-text fw-bold">Rp 575.000 - Rp 4.600.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="Img/event-hitc 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Head In The Clouds 88</h5>
-                  <p class="card-text fw-light">JIExpo Kemayoran, Jakarta <br>7 Maret 2022</p>
-                  <h5 class="card-text fw-bold">Rp 1.350.000 - Rp 3.800.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/wtf 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">WE THE FEST 2023</h5>
-                  <p class="card-text fw-light">GBK Sport Complex - Senayan Jakarta, DKI Jakarta <br>21 Jul - 23 Jul 2023</p>
-                  <h5 class="card-text fw-bold">Rp 1.900.000 - Rp 4.200.000</h5>
-                </div>
-              </div>
-
-              <a class="carousel-control-prev" href="#cardControl" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#cardControl" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Card -->
-    <!-- Card Fan Meeting-->
-    <div class="container-fluid my-5">
-      <div class="container" style="padding-left: 5%;">
-        <h2>Fan Meeting</h2>
-        <h5>Ambil kesempatan bertemu langsung dengan artis favoritmu!</h5>
-      </div>
-      <div class="m-auto slider-section">
-        <div id="cardControl" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-
-            <div class="cards-wrapper">
-              <div class="card d-none d-md-block">
-                <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Fan Fun Fan AAA </h5>
-                  <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
-                  <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
-                </div>
-              </div>
-              <div class="card  d-none d-md-block">
-                <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Fan Fun Fan AAA </h5>
-                  <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
-                  <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Fan Fun Fan AAA </h5>
-                  <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
-                  <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/fan meeting-fanfunfan 1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title fw-normal">Fan Fun Fan AAA </h5>
-                  <p class="card-text fw-light">Jakarta <br>7 Maret 2019</p>
-                  <h5 class="card-text fw-bold">Rp 2.000.000 - Rp 6.800.000</h5>
-                </div>
-              </div>
-
-              <a class="carousel-control-prev" href="#cardControl" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#cardControl" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Card -->
-
-</div>
-
-  <div class="footer d-flex">
-    <!-- kontak -->
-    <div class="kontak">
-      <div class="logo">
-        <img class="tix3d" src="img/logo.png" alt="" />
-      </div>
-
-      <div class="whatsapp d-flex">
-        <img src="img/ic-wa.svg" alt="" />
-        <div>
-          <span class="title-wa">WhatsApp</span>
-          <p class="no-wa">+62 895-3254-73045</p>
-        </div>
-      </div>
-
-      <div class="email d-flex">
-        <img src="img/ic-email.svg" alt="" />
-        <div>
-          <span class="title-email">Email</span>
-          <p class="no-wa">hello@tix3d.com</p>
+        <div class="d-flex">
+          <img src="img/logo-pembayaran/bni.svg" alt="">
+          <img src="img/logo-pembayaran/bri 1.svg" alt="">
+          <img src="img/logo-pembayaran/mandiri 1.svg" alt="">
+          <img src="img/logo-pembayaran/dana.svg" alt="">
+          <img src="img/logo-pembayaran/gopay.svg" alt="">
+          <img src="img/logo-pembayaran/ShopeePay.svg" alt="">
         </div>
       </div>
     </div>
 
-    <!-- tentang tix3d -->
-    <div class="tentang">
-      <div style="margin-bottom: 24px;">
-        <span>Tentang Tix3D</span>
-      </div>
-      <p>
-        Tix3D adalah situs website e-commerce yang menyediakan tiket event
-        yang terintegrasi dengan teknologi 3D untuk meningkatkan pengalaman
-        pengguna dalam memutuskan pembelian tiket.
-      </p>
-    </div>
-
-    <!-- pembayaran -->
-    <div class="pembayaran" style="padding: 24px 0px;">
-      <div style="margin-bottom: 16px;">
-        <span">Pilihan Pembayaran</span>
-      </div>
-
-      <div class="d-flex">
-        <img src="img/logo-pembayaran/bni.svg" alt="">
-        <img src="img/logo-pembayaran/bri 1.svg" alt="">
-        <img src="img/logo-pembayaran/mandiri 1.svg" alt="">
-        <img src="img/logo-pembayaran/dana.svg" alt="">
-        <img src="img/logo-pembayaran/gopay.svg" alt="">
-        <img src="img/logo-pembayaran/ShopeePay.svg" alt="">
-      </div>
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+      </script>
 </body>
 
 </html>

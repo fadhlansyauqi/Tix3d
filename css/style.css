@@ -25,11 +25,109 @@ nav.navbar{
     margin: .5em;
 }
 
-.navbar-content .navbar-collapse ul li a.button{
-    background-color: #FB8500;
-    border-radius: 10px;
+.navbar-content .navbar-collapse ul li{
     color: white;
 }
+/* Button daftar */
+.buttonDaftar {
+    background-color: #FB8500;
+    color: #FCFCFC;
+    border-radius: 8px;
+    border: none;
+    width: 80px;
+    height: 43px;
+    left: 20px;
+    top: 20px;
+}
+.buttonDaftar:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FB8500;
+    color: white;
+}
+
+/* modal */
+.modal-content {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+  }
+  .modal-header {
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: none;
+  }
+  .modal-title {
+    font-size: 24px;
+  }
+  .modal-header a {
+    text-decoration: none;
+    color: #fb8500;
+    font-size: 16px;
+  }
+   /* Orange Line that show active menu modal */
+   .modal-body .active {
+    border-bottom-style: solid;
+    border-color: #fb8500;
+  }
+  .modal-body {
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: none;
+  }
+  .input-group-prepend {
+    margin-right: 5%;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .buttonDaftarModal {
+    background-color: #fb8500;
+    color: #fcfcfc;
+    border-radius: 10px;
+    border: none;
+    width: 90%;
+    height: 47px;
+    left: 20px;
+    top: 20px;
+  }
+  .buttonDaftarModal:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      #fb8500;
+    color: white;
+  }
+  .modal-footer p {
+    font-size: 16px;
+    color: #575959;
+    padding: 32px 40px;
+  }
+
+  /* Button Google */
+  .buttonGoogle {
+    border: 0.5px solid #a1a1a1;
+    border-radius: 8px;
+    background: #ffffff;
+    max-width: 90%;
+    height: 47px;
+    font-size: 16px;
+  }
+
+  .buttonGoogle:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      #ffffff;
+  }
+
+  .buttonGoogle img {
+    width: 7%;
+    margin-right: 3%;
+  }
 
 /*Styling kategori*/
 .breadcrumb .breadcrumb-item a{
